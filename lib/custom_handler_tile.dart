@@ -22,13 +22,18 @@ class CustomHandlerTile extends StatelessWidget {
         style: const TextStyle(fontWeight: FontWeight.bold),
       ),
       subtitle: Text(handler.description),
-      tileColor: isSelected ? Colors.green.shade100 : null,
-      trailing: ElevatedButton(
-        onPressed: () {
-          handler.onSelected();
-          onEnabled();
-        },
-        child: const Text('Enable'),
+      trailing: SizedBox(
+        width: 90,
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: isSelected ? Colors.green : Colors.grey,
+          ),
+          onPressed: () {
+            handler.onSelected();
+            onEnabled();
+          },
+          child: Text(isSelected ? 'Enabled' : 'Disabled'),
+        ),
       ),
     );
   }
