@@ -1,16 +1,24 @@
 # error_handler_app
 
-A new Flutter project.
+A Flutter app that implements different levels of error handling.
 
-## Getting Started
+Follows the [Handling errors in Flutter documentation](https://docs.flutter.dev/testing/errors#:~:text=The%20Flutter%20framework%20catches%20errors,by%20setting%20up%20a%20Zone%20).
 
-This project is a starting point for a Flutter application.
+<img src='res/exit_app.gif' width=250>
 
-A few resources to get you started if this is your first Flutter project:
+## Home screen
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+This screen contains some different error handling approaches and a corresponding button to enable each one.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+You can throw errors and see the different behaviours by pressing the top most button.
+
+<img src='res/home_screen.png' width=250>
+
+## Build phase error screen
+
+This used to be the red screen of death, but now with its message and background color replaced.
+
+The build widget error is thrown by pressing the second top most button.
+
+<img src='res/error_screen.png' width=250>
+
