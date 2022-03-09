@@ -6,6 +6,8 @@ Follows the [Handling errors in Flutter documentation](https://docs.flutter.dev/
 
 <img src='res/exit_app.gif' width=250>
 
+---
+
 ## Home screen
 
 This screen contains some different error handling approaches and a corresponding button to enable each one.
@@ -13,6 +15,8 @@ This screen contains some different error handling approaches and a correspondin
 You can throw errors and see the different behaviours by pressing the top most button.
 
 <img src='res/home_screen.png' width=250>
+
+---
 
 ## Build phase error screen
 
