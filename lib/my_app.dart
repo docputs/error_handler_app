@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'custom_error_widget.dart';
 import 'home_page.dart';
 
 class MyApp extends StatelessWidget {
@@ -7,10 +8,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Error Handler',
-      home: HomePage(),
+      builder: (context, child) {
+        final errorWidget = CustomErrorWidget(
+          Exception('This is a custom build phase error widget'),
+        );
+        ErrorWidget.builder = (details) => errorWidget;
+        return child ?? const SizedBox.shrink();
+      },
+      home: const HomePage(),
     );
   }
 }

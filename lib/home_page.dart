@@ -2,6 +2,7 @@ import 'package:error_handler_app/custom_error_handler.dart';
 import 'package:flutter/material.dart';
 
 import 'custom_handler_tile.dart';
+import 'default_button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,6 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   var _selectedHandlerIndex = 0;
+  var _shouldThrowBuildPhaseError = false;
 
   @override
   Widget build(BuildContext context) {
@@ -21,33 +23,30 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text(
-                  'Errors caught by Flutter',
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    throw Exception();
-                  },
-                  child: const Text(
-                    'THROW',
-                    style: TextStyle(
-                      color: Colors.red,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ],
+          if (_shouldThrowBuildPhaseError)
+            Builder(builder: (_) => throw Exception('Build phase exception')),
+          const SizedBox(height: 16),
+          DefaultButton(
+            onPressed: () => throw Exception('Exception caught by Flutter'),
+            label: 'Throw error caught by Flutter',
+          ),
+          DefaultButton(
+            onPressed: () {
+              setState(() {
+                _shouldThrowBuildPhaseError = true;
+              });
+            },
+            label: 'Throw build phase error',
+          ),
+          const SizedBox(height: 36),
+          const Text(
+            'Errors caught by Flutter',
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
             ),
           ),
+          const SizedBox(height: 8),
           Expanded(
             child: ListView.builder(
               itemCount: customErrorHandlers.length,
