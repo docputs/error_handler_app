@@ -16,9 +16,9 @@ You can throw errors and see the different behaviours by pressing the top most b
 
 ## Build phase error screen
 
-This used to be the red screen of death, but now with its message and background color replaced.
+We can also replace the famous red screen of death with our custom widget.
 
-The build widget error is thrown by pressing the second top most button.
+The build phase error is thrown by pressing the second top most button.
 
 <img src='res/error_screen.png' width=250>
 
