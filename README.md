@@ -4,10 +4,6 @@ A Flutter app that implements different levels of error handling.
 
 Follows the [Handling errors in Flutter documentation](https://docs.flutter.dev/testing/errors#:~:text=The%20Flutter%20framework%20catches%20errors,by%20setting%20up%20a%20Zone%20).
 
-<img src='res/exit_app.gif' width=250>
-
----
-
 ## Home screen
 
 This screen contains some different error handling approaches and a corresponding button to enable each one.
@@ -26,3 +22,10 @@ The build widget error is thrown by pressing the second top most button.
 
 <img src='res/error_screen.png' width=250>
 
+---
+
+## Exiting app on error
+
+The app exits after the first button is pressed. This is useful when you have an unrecoverable error in your app and want to avoid users to spot more errors during his experience.
+
+<img src='res/exit_app.gif' width=250>
