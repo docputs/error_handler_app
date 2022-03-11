@@ -1,4 +1,4 @@
-# error_handler_app
+# Error Handler App
 
 A Flutter app that implements different levels of error handling.
 
