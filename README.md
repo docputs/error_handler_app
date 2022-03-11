@@ -26,6 +26,6 @@ The build widget error is thrown by pressing the second top most button.
 
 ## Exiting app on error
 
-The app exits after the first button is pressed. This is useful when you have an unrecoverable error in your app and want to avoid users to spot more errors during his experience.
+The app exits after the first button is pressed. This is useful when you have an unrecoverable error in your app and want to avoid ruining the rest of the user experience.
 
 <img src='res/exit_app.gif' width=250>
