@@ -12,10 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Error Handler',
       builder: (context, child) {
-        final errorWidget = CustomErrorWidget(
-          Exception('This is a custom build phase error widget'),
-        );
-        ErrorWidget.builder = (details) => errorWidget;
+        ErrorWidget.builder = (details) => const CustomErrorWidget();
         return child ?? const SizedBox.shrink();
       },
       home: const HomePage(),
