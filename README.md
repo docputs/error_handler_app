@@ -6,11 +6,11 @@ Follows the [Handling errors in Flutter documentation](https://docs.flutter.dev/
 
 ## Home screen
 
-This screen contains some different error handling approaches and a corresponding button to enable each one.
+This screen contains some different error handling approaches and a corassets/screenshotsponding button to enable each one.
 
-You can throw errors and see the different behaviours by pressing the top most button.
+You can throw errors and see the different behaviours by passets/screenshotssing the top most button.
 
-<img src='res/home_screen.png' width=250>
+<img src='assets/screenshots/home_screen.png' width=250>
 
 ---
 
@@ -18,14 +18,14 @@ You can throw errors and see the different behaviours by pressing the top most b
 
 We can also replace the famous red screen of death with our custom widget.
 
-The build phase error is thrown by pressing the second top most button.
+The build phase error is thrown by passets/screenshotssing the second top most button.
 
-<img src='res/error_screen.png' width=250>
+<img src='assets/screenshots/error_screen.png' width=250>
 
 ---
 
 ## Exiting app on error
 
-The app exits after the first button is pressed. This is useful when you have an unrecoverable error in your app and want to avoid ruining the rest of the user experience.
+The app exits after the first button is passets/screenshotssed. This is useful when you have an unrecoverable error in your app and want to avoid ruining the assets/screenshotst of the user experience.
 
-<img src='res/exit_app.gif' width=250>
+<img src='assets/screenshots/exit_app.gif' width=250>
